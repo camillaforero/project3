@@ -31,28 +31,3 @@ document.addEventListener("DOMContentLoaded", function() {
   if (typeof google !== "undefined") {
     initMap();
   }
-
-  const slideImages = document.querySelectorAll(".slide-image");
-  const nextButton = document.querySelector(".next-slide");
-  const prevButton = document.querySelector(".prev-slide");
-  let currentSlideIndex = 0;
-
-  function showSlide(index) {
-    slideImages.forEach((img, i) => {
-      img.style.display = i === index ? "block" : "none";
-    });
-  }
-
-  nextButton.addEventListener("click", function() {
-    currentSlideIndex = (currentSlideIndex + 1) % slideImages.length;
-    showSlide(currentSlideIndex);
-  });
-
-  prevButton.addEventListener("click", function() {
-    currentSlideIndex = (currentSlideIndex - 1 + slideImages.length) % slideImages.length;
-    showSlide(currentSlideIndex);
-  });
-
-  showSlide(currentSlideIndex);
-
-});
