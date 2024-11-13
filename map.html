@@ -22,8 +22,76 @@
     <h1>My Favorite Restaurants in Chicago!</h1>
   </div>
   <div id="map"></div>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCATQkdXmcjD4zHupWLJ98VXbIz6-_vPWw&callback=initMap">
-    initMap();
+  <script>
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 41.8729, lng: -87.62793 },
+      zoom: 11,
+    });
+      const marker1 = new google.maps.Marker({
+      position: { lat: 41.94282352818788, lng: -87.74698254205208 },
+      map: map,
+      title: "Poncitlan Taqueria",
+      image: "images/torta.png",
+    });
+			
+    const infoWindow1 = new google.maps.InfoWindow({
+      content: "<h2>If you ever crave a Mexican Torta, stop by here and get the Chorizo Torta. It's amazing!</p>",
+    });
+		
+		const marker2 = new google.maps.Marker({
+      position: { lat: 41.86056046702793, lng: -87.63574933045656 },
+      map: map,
+      title: "Bonchon Korean Fried Chicken",
+      image: "images/chicken.png",
+    });
+			
+    const infoWindow2 = new google.maps.InfoWindow({
+      content: "<h2>The fried chicken here is amazing. Some side dishes I recommend are the popcorn shrimp, pork buns, and fries.</p>",
+    });
+		
+		const marker3 = new google.maps.Marker({
+      position: { lat: 41.88044274764335, lng: -87.62304655023526 },
+      map: map,
+      title: "Osaka Sushi and Fresh Fruit Smoothies",
+    });
+			
+    const infoWindow3 = new google.maps.InfoWindow({
+      content: "<h2>I used to come here ALL the time as a kid. Although now less so, I love getting a mango and lychee smoothie, miso soup, and sushi rolls! </p>",
+    });
+		
+		
+    marker1.addListener("click", () => {
+      infoWindow1.open(map, marker1);
+    });
+		
+		marker2.addListener("click", () => {
+      infoWindow2.open(map, marker2);
+    });
+		
+		marker3.addListener("click", () => {
+      infoWindow3.open(map, marker3);
+    });
+  
+      const centerControlDiv = document.createElement("div");
+      const centerControl = createCenterControl(centerControlDiv, map, marker);
+      map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
+    }
+  
+    function createCenterControl(controlDiv, map, marker) {
+      const controlUI = document.createElement("div");
+      controlUI.classList.add("custom-control");
+      controlUI.title = "Click to center the map on the marker";
+      controlUI.innerText = "Center Map on Marker";
+      controlDiv.appendChild(controlUI);
+  
+      controlUI.addEventListener("click", () => {
+        map.setCenter(marker.getPosition());
+        map.setZoom(12);
+      });
+  
+      return controlUI;
+    }
   </script>
 </body>
 </html>
