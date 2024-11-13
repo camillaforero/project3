@@ -51,7 +51,7 @@ async function initMap() {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-      content: `<h3>${place.title}</h3><p>${place.description}</p>`
+      content: '<h3>{place.title}</h3><p>{place.description}</p>'
     });
 
     marker.addListener("click", () => {
