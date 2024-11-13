@@ -141,7 +141,7 @@ iframe {
   height: 30%;
 }
 slideshow-container {
-  max-width: 1000px;
+  max-width: 30%;
   position: relative;
   margin: auto;
 }
