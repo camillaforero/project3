@@ -45,8 +45,8 @@ async function initMap() {
       map: map,
       title: place.title,
       icon: {
-        url: place.image,  // Use unique image for each marker
-        scaledSize: new google.maps.Size(40, 40)  // Adjust size as needed
+        url: place.image,  
+        scaledSize: new google.maps.Size(40, 40) 
       }
     });
 
