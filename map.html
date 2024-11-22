@@ -64,7 +64,7 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
   </script>
- <div id="map" style="height: 600px; width: 100%; text-align: center;"></div>
+ <div id="map" style="height: 500px; width: 100%; text-align: center;"></div>
   <script>
     let map;
 
@@ -133,7 +133,7 @@ function showSlides() {
         map.setCenter(marker.getPosition());
         map.setZoom(12);
       });
-
+      google.maps.event.trigger(map, 'resize');
       return controlUI;
     }
   </script>
