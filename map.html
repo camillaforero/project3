@@ -4,9 +4,84 @@
   <meta charset="utf-8"> 
   <title>Google Maps</title>
   <link rel="stylesheet" href="css/normalize.css">
-  
   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr06XgFmTqX-jyP99kNQQb57yOzlE10Wg&loading=async&callback=initMap"></script>
+  <style>
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main-nav {
+      float: left;
+      width: 100px;
+      background-color: Thistle;
+      text-decoration: none;
+    }
+    #main-nav ul li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      position: relative;
+      left: 50%;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      color: Black; 
+      background-color: HotPink; 
+      text-decoration: none; 
+  }
+  a{
+    text-decoration:none;
+  }
+  main-nav ul li {
+      float: left;
+      position: relative;
+      right: 50%;
+      text-decoration: none;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    unicode-bidi: isolate;
+    background-color: Plum;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px;
+    text-decoration: none;
+}
+main-nav ul li a {
+  padding: 10px 25px;
+  display: block;
+  color: Plum;
+  text-decoration: none;
+}
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navigation ul li {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+  background-color: Plum; 
+}
+  </style>
 </head>
+  
 <body>
   <div class="nav-container">
     <nav class="navigation">
