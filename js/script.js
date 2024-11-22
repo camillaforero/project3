@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
       infoWindow.open(map, marker);
     });
   }
+  window.addEventListener("resize", function() {
+    google.maps.event.trigger(map, 'resize');
+  });
 
   if (typeof google !== "undefined") {
     initMap();
