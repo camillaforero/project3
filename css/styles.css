@@ -83,7 +83,7 @@ h1 {
   color: Black;
   font-family: "Delius Swash Caps", sans-serif;
 }
-#typical {
+div {
   background-color: HotPink;
   text-align: center;
   display: flow;
